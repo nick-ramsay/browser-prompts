@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    
     <header>
         <h1>Browser Prompt Demonstration</h1>
     </header>
@@ -19,8 +20,104 @@
         <button type="button" id="enter-name-btn">Enter Your Name</button>
         <button type="button" id="update-name-btn">Update Your Name</button>
         <button type="button" id="delete-name-btn">Delete Your Name</button>
-        <script type="text/javascript" src="./javascript/prompts.js"></script>
     </div>
+  
+    <form id="test-form">
+        <label for="test-items">Choose an Item:</label>
+        <select id="items" name="items">
+            <option id="item-list-1" value="item1">Item #1</option>
+            <option id="item-list-2" value="item2">Item #2</option>
+            <option id="item-list-3" value="item3">Item #3</option>
+            <option id="item-list-4" value="item4">Item #4</option>
+        </select>
+    </form>
+    
+    <form id="test-form-visible">
+        <label for="test-items-visible">Choose an Item:</label>
+        <select id="items" name="items">
+            <option>Item #0</option>
+            <option>Item #1</option>
+            <option>Item #2</option>
+            <option>Item #3</option>
+            <option>Item #4</option>
+        </select>
+    </form>
+    <form action="/action_page.php">
+        <p>Please select your favorite Web language:</p>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+    </form>
+    <br>
+    <a href="https://app.gusto-demo.com/payrolls/c1a76720-8214-4fa4-bb60-37f9086145f5/printable_check?check_stock_type=custom_gusto_check_payment&x_role_id=7757869455272857" target="_blank" style="text-decoration: none;">Print Checks</a>
+    <br>
+    <a href="" target="popup" onclick="window.open('https://www.datadoghq.com/', 'name', 'width=600,height=400')">Open DatadogHQ Site in a Popup Window</a>
+    <br>
+    <br>
+    <input slot="input" id="datepicker-1" type="text" name="" placeholder="MMM d, yyyy" autocomplete="off" data-cy="input" class="up-input">
+    <br>
+    <br>
+    <p>Current Cookies: <span id="test-cookie"></span></p>
+    <br>
+    <br>
+    <button id="show-cookies-btn">Show Cookies</button>
+    <br><br>
+    <table>
+        <tr>
+            <!--<td class="dataCol">239.0&nbsp;GB&nbsp;(92%)&nbsp;<a>[View]</a></td>-->
+        </tr>
+    </table>
+    <br>
+    <br>
+    <!--<img src="https://wikipedia.org/static/images/project-logos/enwiki.png" alt="Wiki_Logo" />-->
+    <br>
+    <br>
+    <div class="file-uploader">
+        <div class="filepond--wrapper __web-inspector-hide-shortcut__">
+            <div class="filepond--root filepond--hopper" data-style-button-remove-item-position="left"></div>
+            <label for="myfile">Select a file:</label>
+            <input type="file" id="myfile" name="myfile">
+        </div>
+    </div>
+
+    <!--
+    <button id="testElementContentBtn">Test Element Content</button>
+    -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
+        integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="./javascript/prompts.js"></script>
+    <script>
+        (function(h,o,u,n,d) {
+          h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+          d=o.createElement(u);d.async=1;d.src=n
+          n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+        })(window,document,'script','https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js','DD_RUM')
+        window.DD_RUM.onReady(function() {
+          window.DD_RUM.init({
+            clientToken: 'pubf90a50cfeac8d6d7fb653c30fbc8cab0',
+            applicationId: 'd730a823-1e74-4758-8ef0-2ab9c398d6ec',
+            // `site` refers to the Datadog site parameter of your organization
+            // see https://docs.datadoghq.com/getting_started/site/
+            site: 'datadoghq.com',
+            service: 'javascript-popups',
+            env: 'staging',
+            // Specify a version number to identify the deployed version of your application in Datadog
+            version: '2.0.0', 
+            sessionSampleRate: 100,
+            sessionReplaySampleRate: 100,
+            trackUserInteractions: true,
+            trackResources: true,
+            trackLongTasks: true,
+            defaultPrivacyLevel: 'mask-user-input',
+          });
+        })
+      </script>
 </body>
 
 </html>
