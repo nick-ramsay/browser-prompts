@@ -138,7 +138,7 @@
                         const headers = Object.fromEntries(context.response.headers)
                         console.log(headers);
 
-                        console.log(context.response)
+                        event.context.headers = headers
                         //event.context.uniqueID = context.response.headers['X-Athena-Unique-ID'];
                         //event.context.rpc = context.response.headers['X-Athena-Rpc'];
 
