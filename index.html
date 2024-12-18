@@ -135,6 +135,8 @@
                 defaultPrivacyLevel: 'mask-user-input',
                 beforeSend: (event, context) => {
                     if (event.type === 'resource' && event.resource.type === 'fetch') {
+                        const headers = Object.fromEntries(context.response.headers)
+                        console.log(headers);
 
                         console.log(context.response)
                         //event.context.uniqueID = context.response.headers['X-Athena-Unique-ID'];
