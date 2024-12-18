@@ -139,7 +139,7 @@
 
                         event.context.headers = headers
                         event.context.contentType = headers['content-type'];
-                        event.context.responseBody = context.xhr.response;
+                        event.context.responseBody = context.requestInit.body;
 
                     }
 
