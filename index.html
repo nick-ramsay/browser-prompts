@@ -136,11 +136,9 @@
                 beforeSend: (event, context) => {
                     if (event.type === 'resource' && event.resource.type === 'fetch') {
                         const headers = Object.fromEntries(context.response.headers)
-                        console.log(headers);
 
                         event.context.headers = headers
-                        //event.context.uniqueID = context.response.headers['X-Athena-Unique-ID'];
-                        //event.context.rpc = context.response.headers['X-Athena-Rpc'];
+                        event.context.contentType = context.response.headers['content-type'];
 
                     }
 
