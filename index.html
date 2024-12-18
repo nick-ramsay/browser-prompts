@@ -138,7 +138,7 @@
                         const headers = Object.fromEntries(context.response.headers)
 
                         event.context.headers = headers
-                        event.context.contentType = context.response.headers['content-type'];
+                        event.context.contentType = headers['content-type'];
 
                     }
 
