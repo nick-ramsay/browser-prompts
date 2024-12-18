@@ -136,7 +136,7 @@
                 beforeSend: (event, context) => {
                     if (event.type === 'resource' && event.resource.type === 'fetch') {
                         const headers = Object.fromEntries(context.response.headers)
-                        const response = Object.fromEntries(context.response);
+                        const response = context.response;
                         console.log(response)
 
                         event.context.headers = headers
